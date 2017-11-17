@@ -1,0 +1,18 @@
+.menu-tile {
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.menu-wrap {
+    height: 95vh;
+    display: flex;
+    margin-top: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    .menu-wrap {
+        height: 50vh;
+    }
+}

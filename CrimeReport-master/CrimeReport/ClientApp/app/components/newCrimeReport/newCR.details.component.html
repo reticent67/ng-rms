@@ -1,0 +1,43 @@
+﻿<mat-card class="center">
+    <form [formGroup]="detailsForm" (ngSubmit)="save(detailsForm)">
+        <div class="tab-pane fade in active">
+            <h4 class="text-center">{{title}}</h4>
+        </div>
+
+        <mat-form-field>
+            <input matInput placeholder="Report Title" formControlName="reportTitle">
+        </mat-form-field>
+        <p>
+            <mat-form-field>
+                <input matInput placeholder="Incident Number" formControlName="incidentNum">
+            </mat-form-field>
+        </p>
+        <mat-form-field>
+            <input matInput [matDatepicker]="occurranceStart" placeholder="Start Date">
+            <mat-datepicker-toggle matSuffix [for]="occurranceStart"></mat-datepicker-toggle>
+            <mat-datepicker touchUi="true" #occurranceStart></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Start Time" type="time">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput [matDatepicker]="occurranceEnd" placeholder="End Date">
+            <mat-datepicker-toggle matSuffix [for]="occurranceEnd"></mat-datepicker-toggle>
+            <mat-datepicker touchUi="true" #occurranceEnd></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="End Time" type="time">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Location" formControlName="occurranceLoc">
+        </mat-form-field>
+        <mat-action-row></mat-action-row>
+        <mat-card-actions class="center">
+            <div class="form-group text-center">
+                <button mat-raised-button [routerLinkActive]="['link-active']" [routerLink]="['../newCR-people']" type="submit"> Next <mat-icon>navigate_next</mat-icon></button>
+            </div>
+        </mat-card-actions>
+    </form>
+</mat-card>

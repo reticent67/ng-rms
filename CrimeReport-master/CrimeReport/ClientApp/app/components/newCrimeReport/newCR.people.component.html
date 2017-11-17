@@ -1,0 +1,30 @@
+<mat-card class="center">
+    <form [formGroup]="formShell" (ngSubmit)="save(formShell)">
+
+        <!-- Begin People Array -->
+        <div formArrayName="people">
+            <div *ngFor="let person of formShell.controls.people.controls; let i=index" class="panel panel-default">
+                <!-- Angular assigns array index as group name by default 0, 1, 2, ... -->
+                <div [formGroupName]="i">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- End People Array-->
+        <!-- Submit Button-->
+        <div>
+            <div>
+                <button mat-raised-button color="primary" (click)="addPerson()">Add person<mat-icon class="pull-right">person_add</mat-icon></button>
+            </div>
+        </div>
+
+        <mat-card-actions>
+            <div class="form-group text-center">
+                <button mat-raised-button type="submit"><mat-icon>navigate_before</mat-icon>Previous </button>
+                <button mat-raised-button type="submit"> Next <mat-icon>navigate_next</mat-icon></button>
+            </div>
+        </mat-card-actions>
+
+    </form>
+</mat-card>

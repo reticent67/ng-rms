@@ -1,0 +1,152 @@
+﻿mat-grid-tile {
+    background: lightblue;
+}
+
+.card-wrap {
+    height: 10vh;
+    display: flex;
+    margin-top: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-title {
+    font-size: 24px;
+}
+
+.person-entry {
+    width: 100%;
+}
+
+.entry-method {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.entry-method-button {
+    margin: 5px;
+}
+
+.step-button {
+    height: 98%;
+    width: 98%;
+    font-size: 16px;
+}
+
+
+/*Progress Bar*/
+
+a {
+    text-decoration: none;
+}
+
+.menu-wrap {
+    position: relative;
+    margin-bottom: 6px;
+    margin-top: 10px;
+    max-height: 96px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    /* Make an auto-hiding scroller for the 3 people using a IE */
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    /* For WebKit implementations, provide inertia scrolling */
+    -webkit-overflow-scrolling: touch;
+    /* We don't want internal inline elements to wrap */
+    white-space: nowrap;
+    /* Remove the default scrollbar for WebKit implementations */
+}
+
+.menu-wrap::-webkit-scrollbar {
+    display: none;
+}
+
+.app-menu {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    padding-left: 8px;
+}
+
+.menu-item {
+    font-size: 16px;
+    color: #ffffff;
+    background: #283d50;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 45px;
+    border-radius: 3px;
+    font-family: sans-serif;
+    position: relative;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.item-number {
+    position: absolute;
+    left: 2px;
+    top: 0;
+    font-size: 96px;
+    font-weight: 700;
+    overflow: hidden;
+    display: block;
+    color: white;
+}
+
+.menu-text {
+    padding-left: 36px;
+    color: white;
+    text-align: center;
+}
+
+.menu-item:hover {
+    background: #0F7F8C;
+}
+
+.link-active {
+    margin-top: 6px;
+    background: #0F7F8C;
+    align-self: center;
+}
+
+.link-active::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background: transparent;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    margin-left: -12px;
+    border: 12px solid black;
+    border-top-color: black;
+    border-right-color: black;
+    border-bottom-color: black;
+    border-left-color: black;
+    border-color: transparent #0F7F8C #0F7F8C transparent;
+    z-index: -1;
+}
+
+@media only screen and (max-width: 900px) {
+    .body-content {
+        padding-top: 0;
+    }
+    .app-title {
+        font-size: 16px;
+    }
+    /*Progress Bar*/
+    .app-menu {
+        padding-left: 0;
+    }
+    .menu-item div {
+        display: none;
+        float: none;
+        position: fixed;
+    }
+}

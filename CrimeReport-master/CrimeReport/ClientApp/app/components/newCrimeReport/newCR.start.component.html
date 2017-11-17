@@ -1,0 +1,13 @@
+﻿<div class="container">
+    <div class="row">
+        <newCR-progBar></newCR-progBar>
+    </div>
+    <div class="row">
+        <form id="msform">
+            <router-outlet></router-outlet>
+        </form>
+    </div>
+    <div class="center">
+        <pre> {{ reportFormData.value | json }}</pre>
+    </div>
+</div>

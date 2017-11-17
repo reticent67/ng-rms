@@ -1,0 +1,54 @@
+<mat-card class="center">
+    <form [formGroup]="formShell" (ngSubmit)="save(formShell)">
+        <h2>People Involved</h2>
+        <mat-vertical-stepper>
+            <mat-step label="Role">
+
+                <h4>This person is a...</h4>
+                <mat-grid-list class="center" cols="1" gutterSize="5px">
+                    <mat-grid-tile>
+                        <button mat-raised-button class='step-button' matStepperNext>Victim</button>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <button mat-raised-button class='step-button' matStepperNext>Suspect</button>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <button mat-raised-button class='step-button' matStepperNext>Witness</button>
+                    </mat-grid-tile>
+                </mat-grid-list>
+
+            </mat-step>
+            <mat-step label="Personal Info">
+
+                <h4>Enter this person by...</h4>
+                <mat-grid-list class="center" cols="1" gutterSize="5px">
+                    <mat-grid-tile>
+                        <button mat-raised-button class='step-button' matStepperNext>Scan ID</button>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <button mat-raised-button class='step-button' matStepperNext>Name/ID Search</button>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <button mat-raised-button class='step-button' matStepperNext>Manual Entry</button>
+                    </mat-grid-tile>
+                </mat-grid-list>
+
+                <div>
+                    <button mat-raised-button matStepperPrevious>Back</button>
+                </div>
+            </mat-step>
+            <mat-step label="Involved Vehicles">
+                <input MdInput placeholder="3">
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </mat-step>
+
+
+
+        </mat-vertical-stepper>
+
+
+    </form>
+</mat-card>
